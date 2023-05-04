@@ -1,5 +1,4 @@
 const timerDisplay = document.querySelector('.time-left');
-
 let countdown;
 
 function timer(minutes) {
@@ -13,6 +12,9 @@ function timer(minutes) {
     const secondsLeft = Math.round((then - Date.now()) / 1000);
     if (secondsLeft < 0) {
       clearInterval(countdown);
+      //Activar la notificacion//
+      const beepSound = document.getElementById('beep');
+      beepSound.play();
       return;
     }
     displayTimeLeft(secondsLeft);
@@ -30,7 +32,7 @@ const startBtn = document.querySelector('.start-btn');
 const stopBtn = document.querySelector('.stop-btn');
 
 function startTimer() {
-  const minutes = 60;
+  const minutes = 1;
   timer(minutes);
 }
 
