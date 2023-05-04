@@ -1,17 +1,26 @@
-//Este vendria a ser el cuerpo de la aplicacion, es el punto de entrada
-const {app, BrowserWindow} = require('electron') 
+const { app, BrowserWindow } = require('electron')
 
-const CreateWindow = () => {
-    const window = new BrowserWindow ( {
-        width: 800,
-        height: 600,
-        minWidth: 315,
-        minHeight: 82
-    })
+const createWindow = () => {
+  const win = new BrowserWindow({
+    width: 800,
+    height: 600
+  })
 
-    window.loadFile('index.html')
+  win.loadFile('src/index.html')
 }
 
 app.whenReady().then(() => {
-    CreateWindow()
+  createWindow()
+
+  app.on('activate', () => {
+    if (BrowserWindow.getAllWindows().length === 0) {
+      createWindow()
+    }
+  })
+})
+
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') {
+    app.quit()
+  }
 })
