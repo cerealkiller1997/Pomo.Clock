@@ -107,23 +107,12 @@ nav a {
     color: var(--three-color);
     font-stretch: condensed;
 }
-  
+/* Botones */
 .buttons {
     display: flex;
     justify-content: space-between;
     padding: 0.5rem;
     gap: 6rem;
-}
-
-/* Botones */
-button {
-    background-color: #446491;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 6px;
 }
 .timer .buttons .start-btn {
     font-size: 2rem;
@@ -131,8 +120,49 @@ button {
 .timer .buttons .stop-btn {
     font-size: 2rem;
 }
-  
-button:hover {
-    background-color: #555;
+/* botones start stop */
+.buttons .start-btn {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #446491;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
 }
-  
+.buttons .start-btn:active {
+    box-shadow: 0 5px #666;
+    background-color: var(--main-color);
+    transform: translateY(4px);
+}
+.buttons .start-btn:hover {
+    background-color: var(--three-color);
+}
+/*  */
+.buttons .stop-btn {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #446491;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.buttons .stop-btn:active {
+    box-shadow: 0 5px #666;
+    background-color: var(--main-color);
+    transform: translateY(4px);
+}
+.buttons .stop-btn:hover {
+    background-color: var(--three-color);
+}
