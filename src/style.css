@@ -1,129 +1,129 @@
-body {
-    background-color: var(--main-color);
-    background-image: url(/img/engin-akyurt-gJILnne_HFg-unsplash.jpg);
-    color: #fff;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-  }
+/* Variables globales */
 :root {
-    --main-color: #07617d;
-    --second-color: #ececeb;
-    --three-color: #2e383f;
-    --four-color: #f9a828;
-}
-/* Estilos para el encabezado */
-header {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    border-radius: 1.5rem;
+  --main-color: #07617d;
+  --second-color: #ececeb;
+  --three-color: #2e383f;
+  --four-color: #f9a828;
 }
   
-  /* Estilos para el título */
+/* Estilos generales */
+body {
+  background-color: var(--main-color);
+  background-image: url(/img/engin-akyurt-gJILnne_HFg-unsplash.jpg);
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+  
+/* Estilos para el encabezado */
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1.5rem;
+}
+  
+/* Estilos para el título */
 h1 {
-    margin: 0;
+  margin: 0;
 }
   
 /* Estilos para la barra de navegación */
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  }
   
 nav li {
-    margin-right: 1rem;
-}
+  margin-right: 1rem;
+  }
   
 nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    transition: background-color 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
 }
   
 nav a:hover {
-    background-color: #555;
+  background-color: #555;
 }
-
+  
 /* Estilos para hacer la barra de navegación responsive */
 @media (max-width: 600px) {
 nav {
-    display: none;
-    position: absolute;
-    top: 4rem;
-    left: 0;
-    background-color: #333;
-    width: 100%;
-    padding: 1rem;
+  display: none;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  background-color: #333;
+  width: 100%;
+  padding: 1rem;
 }
-    
+  
 nav ul {
-    flex-direction: column;
+  flex-direction: column;
 }
-    
+
 nav li {
   margin: 0 0 1rem 0;
 }
-    
+
 nav a {
   display: block;
   padding: 0;
 }
+
 /* Mostrar la barra de navegación cuando se hace clic en el botón */
 #toggle-nav {
-    display: block;
+  display: block;
 }
 }
 
-/*Config del panel reloj*/
+/* Configuración del panel del reloj */
 .timer {
-    width: 250px;
-    margin: 50px auto;
-    text-align: center;
-    border: 0.2rem solid var(--main-color);
-    border-radius: 1.5rem;
-    padding: 1rem 7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: var(--second-color);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    box-shadow: 6px 10px 5px #0c0c0d77;     
-} 
-.time-left {
-    font-size: 8rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    /* border: 2px solid black; */
-    color: var(--three-color);
-    font-stretch: condensed;
+  width: 250px;
+  margin: 50px auto;
+  text-align: center;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 1.5rem;
+  padding: 1rem 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--second-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-shadow: 6px 10px 5px #0c0c0d77;
 }
+
+.time-left {
+  font-size: 8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--three-color);
+  font-stretch: condensed;
+}
+
 /* Botones */
 .buttons {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem;
-    gap: 6rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  gap: 6rem;
 }
-.timer .buttons .start-btn {
-    font-size: 2rem;
-}
-.timer .buttons .stop-btn {
-    font-size: 2rem;
-}
-/* botones start stop */
+
 .buttons .start-btn {
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
   cursor: pointer;
-  text-align: center;	
+  text-align: center;
   text-decoration: none;
   outline: none;
   color: #fff;
@@ -132,21 +132,23 @@ nav a {
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
+
 .buttons .start-btn:active {
-    box-shadow: 0 5px #666;
-    background-color: var(--main-color);
-    transform: translateY(4px);
+  box-shadow: 0 5px #666;
+  background-color: var(--main-color);
+  transform: translateY(4px);
 }
+
 .buttons .start-btn:hover {
-    background-color: var(--three-color);
+  background-color: var(--three-color);
 }
-/*  */
+
 .buttons .stop-btn {
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
   cursor: pointer;
-  text-align: center;	
+  text-align: center;
   text-decoration: none;
   outline: none;
   color: #fff;
@@ -155,40 +157,42 @@ nav a {
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
+
 .buttons .stop-btn:active {
-    box-shadow: 0 5px #666;
-    background-color: var(--main-color);
-    transform: translateY(4px);
+  box-shadow: 0 5px #666;
+  background-color: var(--main-color);
+  transform: translateY(4px);
 }
+
 .buttons .stop-btn:hover {
-    background-color: var(--three-color);
+  background-color: var(--three-color);
 }
 
 /* BoxInfo */
 .boxInfo {
-    width: 250px;
-    margin: 25px auto;
-    text-align: center;
-    border: 0.2rem solid var(--main-color);
-    border-radius: 1.5rem;
-    padding: 20rem 7rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: var(--second-color);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    box-shadow: 6px 10px 5px #0c0c0d77;  
-    position: relative;
+  width: 250px;
+  margin: 25px auto;
+  text-align: center;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 1.5rem;
+  padding: 20rem 7rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--second-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-shadow: 6px 10px 5px #0c0c0d77;
+  position: relative;
 }
+
 .boxInfo #spanDate {
-    /* background-color: black; */
-    color: black;
-    font-size: 1rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    position: absolute;
-    top: 2%;
-    font-weight: bolder;
+  color: black;
+  font-size: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: absolute;
+  top: 2%;
+  font-weight: bolder;
 }
 
 

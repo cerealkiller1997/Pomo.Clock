@@ -1,57 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8" />
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <link rel="stylesheet" href="style.css">
-    <title>PomoClock</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <title>PomoClock</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header>
-    <h1>PomoClock</h1>
-    <nav>
-      <ul>
-        <!-- <li><a href="#">Inicio</a></li>
-        <li><a href="#">Acerca de</a></li> -->
-        <li><a href="https://github.com/cerealkiller1997" target="_blank">Contacto</a></li>
-      </ul>
-    </nav>
+      <h1>PomoClock</h1>
+      <nav>
+          <ul>
+              <!-- <li><a href="#">Inicio</a></li>
+              <li><a href="#">Acerca de</a></li> -->
+              <li><a href="https://github.com/cerealkiller1997" target="_blank">Contacto</a></li>
+          </ul>
+      </nav>
   </header>
   <div class="timer">
-    <div class="time-left">60:00</div>
-    <div class="buttons">
-      <button id="myButtonStart" class="start-btn">Start</button>
-      <button id="myButtonStop" class="stop-btn">Stop</button>
-    </div>
+      <div class="time-left">60:00</div>
+      <div class="buttons">
+          <button id="myButtonStart" class="start-btn">Start</button>
+          <button id="myButtonStop" class="stop-btn">Stop</button>
+      </div>
   </div>
   <div class="boxInfo">
-    <span id="spanDate"></span>
-    <canvas id="myChart"></canvas>
+      <span id="spanDate"></span>
+      <div id="chartConainer">
+          <canvas id="myChart"></canvas>
+      </div>
   </div>
   
   <!-- Sonidos, notificaciones -->
   <audio id="beep">
-    <source src="/sounds/soundfinish.mp3" type="audio/mp3">
+      <source src="/sounds/soundfinish.mp3" type="audio/mp3">
   </audio>
   <audio id="myAudio" src="/sounds/onclick.wav" type="audio/wav"></audio>
-  
-  <!-- Scripts c: -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+
+  <!-- Scripts -->
   <script src="renderer.js"></script>
+
 </body>
 </html>
-
-
-

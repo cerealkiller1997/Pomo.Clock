@@ -1,3 +1,5 @@
+// Temporizador
+
 const timerDisplay = document.querySelector('.time-left');
 let countdown;
 
@@ -12,7 +14,7 @@ function timer(minutes) {
     const secondsLeft = Math.round((then - Date.now()) / 1000);
     if (secondsLeft < 0) {
       clearInterval(countdown);
-      //Activar la notificacion//
+      // Activar la notificación
       const beepSound = document.getElementById('beep');
       beepSound.play();
       return;
@@ -28,11 +30,13 @@ function displayTimeLeft(seconds) {
   timerDisplay.textContent = display;
 }
 
+// Botones de inicio y stop
+
 const startBtn = document.querySelector('.start-btn');
 const stopBtn = document.querySelector('.stop-btn');
 
 function startTimer() {
-  //aqui se determinan los minutos del contador
+  // Aquí se determinan los minutos del contador
   const minutes = 60;
   timer(minutes);
 }
@@ -45,7 +49,8 @@ function stopTimer() {
 startBtn.addEventListener('click', startTimer);
 stopBtn.addEventListener('click', stopTimer);
 
-//sound on click buttons
+// Sonido al hacer clic en los botones
+
 const myButtonStart = document.getElementById("myButtonStart");
 
 myButtonStart.onclick = function() {
@@ -58,12 +63,14 @@ myButtonStop.onclick = function() {
   myAudio.play();
 }
 
-//Date
-var months = ['January','February','March','April','May','June','July',
-'August','September','October','November','December'];       
-var tomorrow = new Date();
-tomorrow.setTime(tomorrow.getTime() + (1000*3600*24));       
-document.getElementById("spanDate").innerHTML = months[tomorrow.getMonth()] + " " + tomorrow.getDate()+ ", " + tomorrow.getFullYear();
+// Fecha
 
-//AlmacenarDatos
+var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+  'August', 'September', 'October', 'November', 'December'];
+var tomorrow = new Date();
+tomorrow.setTime(tomorrow.getTime() + (1000 * 3600 * 24));
+document.getElementById("spanDate").innerHTML = months[tomorrow.getMonth()] + " " + tomorrow.getDate() + ", " + tomorrow.getFullYear();
+
+// Gráfico
+
 
