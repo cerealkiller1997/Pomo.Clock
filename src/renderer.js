@@ -39,8 +39,26 @@ function startTimer() {
   // Aquí se determinan los minutos del contador
   const minutes = 60;
   timer(minutes);
+  // Registrar las horas estudiadas para el día actual
+  const currentDate = new Date().toLocaleDateString();
+  studyData[currentDate] = minutes / 60;
+  // Actualizar el gráfico
+  updateChart();
 }
+function updateChart() {
+  const dates = Object.keys(studyData);
+  const hours = Object.values(studyData);
 
+  const data = [
+    {
+      x: dates,
+      y: hours,
+      type: 'bar'
+    }
+  ];
+
+  Plotly.newPlot('chart-container', data);
+}
 function stopTimer() {
   clearInterval(countdown);
   timerDisplay.textContent = "60:00";
@@ -71,6 +89,6 @@ var tomorrow = new Date();
 tomorrow.setTime(tomorrow.getTime() + (1000 * 3600 * 24));
 document.getElementById("spanDate").innerHTML = months[tomorrow.getMonth()] + " " + tomorrow.getDate() + ", " + tomorrow.getFullYear();
 
-// Gráfico
+// Gráfico en creacion :)
 
 

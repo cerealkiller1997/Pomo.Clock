@@ -11,12 +11,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron": "^24.1.3"
+    "electron": "^24.1.3",
+    "plotly.js": "^2.22.0"
   },
   "devDependencies": {
     "standard": "^17.0.0"
   },
   "eslintConfig": {
     "extends": "standard"
-  } 
+  }
 }
